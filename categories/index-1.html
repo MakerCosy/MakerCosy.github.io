@@ -32,6 +32,18 @@
 
 
 <body>
+<script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+<script src="/js/jq.snow.js"></script>
+<!--下面是调用方法和参数说明-->
+<script>
+$(function(){
+	$.fn.snow({ 
+			minSize: 5,		//雪花的最小尺寸
+			maxSize: 40, 	//雪花的最大尺寸
+			newOn: 100		//雪花出现的频率 这个数值越小雪花越多
+		});
+	});
+</script>
 
 <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -815,9 +827,8 @@
 <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            本站由&copy;<a href="https://blinkfox.github.io/" target="_blank">zwx</a>基于
-            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
-            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建.
+            本站由&copy;<a href="https://zwxzwx.tk/about/" target="_blank">zwx</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 搭建.
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
@@ -836,7 +847,7 @@
                 
                 <span id="busuanzi_container_site_uv">
                     <i class="fa fa-users"></i>
-                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                    次,&nbsp;恭喜你成为本网站的第 <span id="busuanzi_value_site_uv" class="white-color"></span> 个访问者！
                 </span>
                 
             
@@ -906,14 +917,19 @@ $(function () {
 
 
 
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
     <script src="/libs/others/clicklove.js"></script>
 
 
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
+
 <script type="text/javascript"
-color="0,0,255" opacity='0.7' zIndex="2" count="150" src="/js/dynic.js"></script>
+color="0,0,255" opacity='0.7' zIndex="2" count="150" src="/js/heartfly.js"></script>
+
+
+	
 
 </body>
 </html>
