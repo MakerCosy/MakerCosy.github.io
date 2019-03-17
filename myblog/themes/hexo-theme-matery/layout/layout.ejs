@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="<%= config.language %>">
+<%- partial('_partial/head') %>
+
+<body>
+<script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+<script src="/js/jq.snow.js"></script>
+<!--下面是调用方法和参数说明-->
+<script>
+$(function(){
+	$.fn.snow({ 
+			minSize: 5,		//雪花的最小尺寸
+			maxSize: 20, 	//雪花的最大尺寸
+			newOn: 150		//雪花出现的频率 这个数值越小雪花越多
+		});
+	});
+</script>
+
+<%- partial('_partial/header') %>
+<%- body %>
+<%- partial('_partial/footer') %>
+
+<%- partial('_partial/search') %>
+<%- partial('_partial/back-top') %>
+
+<script src="<%- theme.libs.js.materialize %>"></script>
+<script src="<%- theme.libs.js.masonry %>"></script>
+<script src="<%- theme.libs.js.aos %>"></script>
+<script src="<%- theme.libs.js.scrollProgress %>"></script>
+<script src="<%- theme.libs.js.lightgallery %>"></script>
+<script src="/js/matery.js"></script>
+
+<%- partial('_partial/google-analytics') %>
+<% if (theme.clicklove.enable) { %>
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script src="<%- theme.libs.js.clicklove %>"></script>
+<% } %>
+<% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
+    <script async src="<%- theme.libs.js.busuanzi %>"></script>
+<% } %>
+
+
+<script type="text/javascript"
+color="0,0,255" opacity='0.7' zIndex="2" count="100" src="/js/dynic.js"></script>
+
+
+	
+
+</body>
+</html>
